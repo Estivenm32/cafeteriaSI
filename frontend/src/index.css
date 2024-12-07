@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reseteo de estilos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos exclusivos de HomePage */
+.homepage {
+  background-image: url('../assets/cafeteriaMesas.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Fondo que cubre toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Necesario para el overlay */
+}
+
+.homepage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(43, 43, 121, 0.4); /* Azul con opacidad */
+  z-index: 0; /* Coloca el overlay debajo del contenido */
+}
+
+.homepage h1, 
+.homepage p, 
+.homepage .flex {
+  z-index: 10; /* Coloca el contenido encima del overlay */
+  position: relative;
+}
+
+.homepage h1 {
+  font-size: 2.5rem; /* text-4xl */
+  font-weight: bold; /* font-bold */
+  color: white; /* text-white */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.homepage p {
+  font-size: 1.125rem; /* text-lg */
+  color: white; /* text-white */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.homepage button {
+  padding: 0.75rem 1.5rem; /* px-6 py-3 */
+  border-radius: 0.5rem; /* rounded-lg */
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s; /* transition duration-300 */
+}
+
+.homepage button.bg-blue-500 {
+  background-color: #3b82f6; /* bg-blue-500 */
+  color: white;
+}
+
+.homepage button.bg-blue-500:hover {
+  background-color: #2563eb; /* hover:bg-blue-600 */
+}
+
+.homepage button.bg-green-500 {
+  background-color: #10b981; /* bg-green-500 */
+  color: white;
+}
+
+.homepage button.bg-green-500:hover {
+  background-color: #059669; /* hover:bg-green-600 */
+}
+
+.homepage .flex a {
+  margin-right: 3rem; /* Ajusta este valor según el espacio deseado */
+}
+
+.homepage .flex a:last-child {
+  margin-right: 0; /* Elimina el margen del último botón */
+}
+
+
+
+
+
+
+
+
+

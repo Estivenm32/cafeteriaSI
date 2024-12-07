@@ -1,0 +1,26 @@
+En caso de que la base de datos no abra por algún error de compatibilidad este es el script de la Base de Datos para ejecutarlo manual:
+
+
+
+CREATE DATABASE cafeteria;
+
+USE cafeteria;
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    reference VARCHAR(255) NOT NULL,
+    price INT NOT NULL,
+    weight INT NOT NULL,
+    category VARCHAR(255) NOT NULL,
+    stock INT NOT NULL,
+    created_at DATE NOT NULL
+);
+
+CREATE TABLE sales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    date DATETIME NOT NULL,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);

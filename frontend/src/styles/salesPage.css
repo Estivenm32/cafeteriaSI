@@ -1,0 +1,438 @@
+/* Estilo general */   
+.sales-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Panel de selección */
+.selection-panel {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+
+.selection-panel h2 {
+    margin-bottom: 15px;
+}
+
+.product-select,
+.quantity-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+/* Panel de productos seleccionados */
+.selected-products {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.selected-products h2 {
+    margin-bottom: 15px;
+}
+
+.selected-products ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.selected-products li {
+    background-color: #e8e8e8;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.page-header {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el texto y el botón */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.page-header h1 {
+    text-align: left;
+    margin-left: 25px; /* Ajusta el valor según sea necesario */
+    margin-top: 30px;
+}
+
+
+
+/* Estilo del formulario de ventas */
+.sales-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+.product-select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.quantity-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-button {
+    width: 50%; /* Ancho del botón centrado */
+    align-self: center; /* Centrado horizontal */
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Tabla de productos seleccionados */ 
+.selected-products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.selected-products-table th,
+.selected-products-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.selected-products-table th {
+    background-color: #4CAF50; /* Cabecera verde */
+    color: white;
+}
+
+.selected-products-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Filas con fondo gris claro */
+}
+
+.selected-products-table tr:hover {
+    background-color: #ddd; /* Resaltado de fila al pasar el ratón */
+}
+
+/* Botón de pagar/vender */
+.checkout-button {
+    width: 50%;
+    padding: 15px;
+    margin-top: 40px;
+    background-color: #007BFF; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.checkout-button:disabled {
+    background-color: #cccccc; /* Gris deshabilitado */
+    cursor: not-allowed;
+}
+
+.checkout-button:hover:not(:disabled) {
+    background-color: #0056b3; /* Azul oscuro al pasar el cursor */
+}
+
+/* Botón de Cancelar Compra*/
+.CancelCompra-button {
+    width: 50%;
+    padding: 15px;
+    margin-top: 40px;
+    background-color: #f11010; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.CancelCompra-button:disabled {
+    background-color: #cccccc; /* Gris deshabilitado */
+    cursor: not-allowed;
+}
+
+.CancelCompra-button:hover:not(:disabled) {
+    background-color: #8b1212; /* Azul oscuro al pasar el cursor */
+}
+
+
+/* Tabla de productos seleccionados */
+.selected-products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.selected-products-table th,
+.selected-products-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.selected-products-table th {
+    background-color: #4CAF50; /* Cabecera verde */
+    color: white;
+}
+
+.selected-products-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Filas con fondo gris claro */
+}
+
+.selected-products-table tr:hover {
+    background-color: #ddd; /* Resaltado de fila al pasar el ratón */
+}
+
+/* Botones de acción (+, -, X) */
+.selected-products-table button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.selected-products-table button:hover {
+    background-color: #45a049;
+}
+
+.selected-products-table button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Botón de eliminar (X) */
+.selected-products-table button.x {
+    background-color: red;
+}
+
+.selected-products-table button.x:hover {
+    background-color: #cc0000;
+}
+
+/* Asegurarse de que el botón de aumentar cantidad quede gris cuando el stock se haya alcanzado */
+.selected-products-table button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Centrar el contenido de la columna Acciones */
+.selected-products-table th:nth-child(3),
+.selected-products-table td:nth-child(3) {
+    text-align: center; /* Centrar horizontalmente */
+    vertical-align: middle; /* Centrar verticalmente */
+}
+
+
+/* Estilos para el modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+.modal-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+/* Estilos para los botones del modal */ 
+.modal-actions {
+    display: flex; /* Utiliza Flexbox para alinearlos horizontalmente */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+.confirm-button, .cancel-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+}
+
+/* Estilos específicos para el botón Confirmar */
+.confirm-button {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+.confirm-button:hover {
+    background-color: #218838; /* Verde oscuro */
+}
+
+/* Estilos específicos para el botón Cerrar */
+.cancel-button {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #c82333; /* Rojo oscuro */
+}
+
+  
+
+ /* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Asegura que el loader esté encima del contenido */
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Popup de Compra Exitosa */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1002; /* Asegura que el popup esté encima del loader */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.selected-products-table-container {
+    max-height: 400px; /* Ajusta esta altura según tus necesidades */
+    overflow-y: auto;
+}
+
+/* Estilo del botón cuando está habilitado */
+.add-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo del botón cuando está deshabilitado (gris) */
+.add-button.disabled {
+    background-color: #b0b0b0; /* Gris */
+    cursor: not-allowed;
+}
+
+
+.no-products-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
