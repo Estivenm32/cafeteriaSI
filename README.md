@@ -1,4 +1,4 @@
-															Prueba Tecnica Konecta
+Prueba Tecnica Konecta
 															
 
 # Descripción 
